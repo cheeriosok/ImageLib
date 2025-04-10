@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <vector>
-#include "stb_image.h"
-#include "stb_image_write.h"
+#include "deps/stb_image.h"
+#include "deps/stb_image_write.h"
 #include <cstring> 
 
 class Image {

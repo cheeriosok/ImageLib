@@ -1,5 +1,3 @@
-#include "utils.hpp"
-//
 // swap_red_blue: Swap the red and blue color channels of the image
 // rotate_rgb: Rotate the color channels (R→G, G→B, B→R cycle)
 // replace_color: Replace all pixels of a specified color with another color
