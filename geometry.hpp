@@ -1,4 +1,4 @@
-
+// THURSDAY && FRIDAY
 // flip_vertically
 // flip_diagonal
 // flip_main_diagonal

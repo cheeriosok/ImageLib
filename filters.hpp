@@ -1,3 +1,4 @@
+// TUESDAY & WEDNESDAY
 // grayscale: Convert the image to shades of gray (remove all color)
 // median_filter: Reduce noise by replacing each pixel with the median of its neighborhood
 // sharpen: Enhance edge contrast to make the image appear clearer or crisper
