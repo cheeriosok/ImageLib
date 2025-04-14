@@ -24,8 +24,8 @@
 // resize_lanczos(image, scale)	High-quality downsampling for photo realism (slower, uses sinc kernel)
 // resize_area(image, scale)	Average-pixel-based method, often used for large downsampling in OpenCV
 
-#ifndef IMGFX_FLIP_HPP
-#define IMGFX_FLIP_HPP
+#ifndef imageFX_FLIP_HPP
+#define imageFX_FLIP_HPP
 
 #include "utils.hpp"
 #include <cstring> // for std::memcpy

@@ -1,8 +1,6 @@
 // SUNDAY
-// blur: Soften the image by averaging each pixel with its neighbors // DONE - ST
 // gaussian_blur: Apply Gaussian-weighted blurring for a smooth, natural loo // DONE - ST
 // box_blur	Average pixels in a square kernel; simplest and fastest blur // DONE - ST
-// gaussian_blur	Weighted average using a Gaussian kernel; produces smooth, natural blur // DONE - ST **
 // median_blur	Replaces each pixel with the median in its neighborhood; removes salt-noise // DONE - ST **
 // bilateral_blur	Blur that preserves edges by considering pixel similarity and spatial distance // DONE - ST **
 // motion_blur	Simulates blur caused by movement; directional kernel along X/Y/diagonal // DONE - NAIVE **

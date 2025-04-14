@@ -259,14 +259,14 @@ inline std::vector<Image> split_channels(const Image& image) {
     const uint8_t* src = image.data();
 
     for (int c = 0; c < channels; ++c) {
-        Image channel_img(width, height, 1);
-        uint8_t* dst = channel_img.data();
+        Image channel_image(width, height, 1);
+        uint8_t* dst = channel_image.data();
 
         for (int i = 0; i < width * height; ++i) {
             dst[i] = src[i * channels + c];
         }
 
-        channel_images.push_back(std::move(channel_img));
+        channel_images.push_back(std::move(channel_image));
     }
 
     return channel_images;
