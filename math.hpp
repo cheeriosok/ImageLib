@@ -40,7 +40,7 @@ Image add_two_images(const Image& image1, const Image& image2, bool blend_alpha 
             float B_a = data2[idx + 3] / 255.0f;
 
             float out_a = A_a + B_a * (1.0f - A_a);
-            if (out_a < 1e-6f) out_a = 1e-6f; // Avoid div by zero
+            if (out_a < 1e-6f) out_a = 1e-6f; 
 
             float out_r = (A_r * A_a + B_r * B_a * (1.0f - A_a)) / out_a;
             float out_g = (A_g * A_a + B_g * B_a * (1.0f - A_a)) / out_a;

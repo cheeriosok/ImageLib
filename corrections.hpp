@@ -1,9 +1,9 @@
 // MONDAY
-// lens_distortion_correction()	Corrects barrel/pincushion lens distortion
-// chromatic_aberration_correction()	Adjusts color channel offsets on edges
-// rolling_shutter_correction()	Corrects skew in frames captured line-by-line
-// white_balance_auto()	Auto-detect and correct color temperature
-// color_balance(r_adj, g_adj, b_adj)	Manual per-channel color curve adjust
+// lens_distortion_correction()	Corrects barrel/pincushion lens distortion // DONE - NAIVE
+// chromatic_aberration_correction()	Adjusts color channel offsets on edges // DONE - NAIVE
+// rolling_shutter_correction()	Corrects skew in frames captured line-by-line // DONE - NAIVE
+// white_balance_auto()	Auto-detect and correct color temperature // DONE - NAIVE
+// color_balance(r_adj, g_adj, b_adj)	Manual per-channel color curve adjust // DONE - NAIVE
 
 #include "utils.hpp"
 
