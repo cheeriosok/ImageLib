@@ -1,4 +1,3 @@
-// SATURDAY
 // normalize: Scale pixel intensities to a standard range (e.g. 0–1 or 0–255)
 // clamp: Limit pixel values to lie within a specified min and max range
 // histogram_equalization: Enhance overall contrast by spreading out intensity distribution

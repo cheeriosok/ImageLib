@@ -1,4 +1,3 @@
-// SATURDAY
 // add(image1, image2)	Per-pixel addition (clamped)
 // subtract(image1, image2)	Per-pixel subtraction
 // multiply(image1, image2)	Per-pixel multiply (e.g. blend mask)
