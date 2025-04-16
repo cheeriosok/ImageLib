@@ -52,9 +52,10 @@ Image clampImage(const Image& image, const std::vector<int>& rgb_clamp) {
     for (int p = 0; p < width * height; ++p) {
         int idx = p * channels;
 
-        dst[idx + 0] = std::clamp(src[idx + 0], rgb_clamp[0], rgb_clamp[1]); // Red
-        dst[idx + 1] = std::clamp(src[idx + 1], rgb_clamp[2], rgb_clamp[3]); // Green
-        dst[idx + 2] = std::clamp(src[idx + 2], rgb_clamp[4], rgb_clamp[5]); // Blue
+        dst[idx + 0] = static_cast<uint8_t>(std::clamp<int>(static_cast<int>(src[idx + 0]), rgb_clamp[0], rgb_clamp[1]));
+        dst[idx + 1] = static_cast<uint8_t>(std::clamp<int>(static_cast<int>(src[idx + 1]), rgb_clamp[2], rgb_clamp[3]));
+        dst[idx + 2] = static_cast<uint8_t>(std::clamp<int>(static_cast<int>(src[idx + 2]), rgb_clamp[4], rgb_clamp[5]));
+        
 
         if (channels == 4) {
             dst[idx + 3] = src[idx + 3]; // Preserve alpha as-is

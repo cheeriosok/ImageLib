@@ -61,8 +61,8 @@ inline Image median_blur(const Image& image, int radius = 1) {
     for (int x = 0; x < width; x++) {
         for (int y = 0; y < height; y++) {
 
-            std::vector<uint8_t> r_vals, g_vals, b_vals;
-            if (channels == 4) std::vector<uint8_t> a_vals;
+            std::vector<uint8_t> r_vals, g_vals, b_vals, a_vals;
+            
 
             for (int wx = -radius; wx <= radius; wx++) {
                 for (int wy = -radius; wy <= radius; wy++) {
@@ -203,20 +203,26 @@ Image sobel_filter(const Image& image) {
     const uint8_t* src = gray.data();
     uint8_t* dst = result.data();
 
-    for (int x = 0; x < width; x++) {
-        for (int y = 0; y < height; y++) {
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
             int gx = 0, gy = 0;
-            const uint8_t* pixel = src[(y * width + x)];
-            for (int hx = -1; hx <= 1; hx++) {
-                for (int hy = -1; hy <= 1; hy++) {
-                    gx += pixel[0] * Gx[hx + 1][hy + 1];
-                    gy += pixel[0] * Gx[hx + 1][hy + 1];
+    
+            for (int ky = -1; ky <= 1; ky++) {
+                for (int kx = -1; kx <= 1; kx++) {
+                    int cx = std::clamp(x + kx, 0, width - 1);
+                    int cy = std::clamp(y + ky, 0, height - 1);
+    
+                    uint8_t pixel = src[cy * width + cx];
+                    gx += pixel * Gx[ky + 1][kx + 1];
+                    gy += pixel * Gy[ky + 1][kx + 1];
                 }
             }
+    
             int magnitude = static_cast<int>(std::sqrt(gx * gx + gy * gy));
             dst[y * width + x] = std::clamp(magnitude, 0, 255);
         }
     }
+    
     return result;
 }
 
